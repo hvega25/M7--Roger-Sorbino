@@ -8,27 +8,27 @@ class vehicle {
     //atributos
     public $marca;
     public $modelo;
-    public $year;
+    public $caballos;
     public $color;
     public $precio;
 
-    function __construct() {
+    public function __construct() {
     }
 
-    function __construct1($marca, $precio) {
+    public function __construct1($marca, $precio) {
         $this->marca = $marca;
         $this->precio = $precio;
     }
 
-    function __construct2($marca, $modelo, $year, $color, $precio) {
+    public function __construct2( $marca, $modelo, $caballos, $color, $precio) {
         $this->marca = $marca;
         $this->modelo = $modelo;
-        $this->year = $year;
+        $this->year = $caballos;
         $this->color = $color;
         $this->precio = $precio;
     }
 
-        // getters and setters
+ // getters and setters
   function set_marca($marca) {
     $this->marca = $marca;
   }
@@ -43,11 +43,11 @@ class vehicle {
     return $this->modelo;
   }
 
-  function set_year($year) {
-    $this->year = $year;
+  function set_year($caballos) {
+    $this->year = $caballos;
   }
   function get_year() {
-    return $this->year;
+    return $this->caballos;
   }
 
   function set_color($color) {
@@ -63,7 +63,19 @@ class vehicle {
   function get_precio() {
     return $this->precio;
   }
-}   
+    public function __toString()
+    {
+        return self::class. ":" . $this->marca. " " . $this->modelo. " " . $this->caballos. " " . $this->color. " " . $this->marca. " " .precio;
+    }
+
+    public static function kmRecorregut(){
+        echo "Ha recorregut : " . rand(1,100) . "kilometres";
+    }
+    public static function vehicleCreat(){
+        echo "Modelo: Ferrari, Caballos 400";
+    }
+}
 ?>
+
 </body>
 </html>
