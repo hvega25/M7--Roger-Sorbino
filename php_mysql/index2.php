@@ -1,4 +1,5 @@
 <?php
+//texto para hacer otro push :v
 $db_host = "localhost";
 $db_nombre = "products";
 $db_usario = "root";
